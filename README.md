@@ -4,7 +4,7 @@ The repository contains residual Bouguer anomaly data of observation craters and
 ## Repository Contents
 - Data of observation craters
 - Input files used to run iSALE-2D simulations
-- Data for producing graphs similar to Figures 4, and 5 in the article (_publication in preparation_)
+- Simulation results used to generate figures similar to Figures 4, and 5 in the article (_publication in preparation_)
 
 The simulations used different target porosity structures, including porous layer thickness and pre-impact porosity. To distinguish between these parameters, the folders follow the following naming convention: `h(porous layer thickness)_P(pre-impact porosity)_I(impactor diameter)`. For example, **h3_P15_I1** stands for **h = 6 km**, **P = 15%**, **I = 1 km**. For exponential porosity structure, the files are named `EXP(exponential)_I(impactor diameter)`.
 
