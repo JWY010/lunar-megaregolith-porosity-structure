@@ -1,0 +1,77 @@
+#ISINP
+------------------------------------------------------------------------
+--- this is the new input file used by iSALE versions of v7.0 and higher
+------------------------------------------------------------------------
+--- lines beginning with '-' or '!' are treated as comments and not
+--- further processed. The difference between the two comment lines
+--- is, lines starting with '-' will appear also in the backup of this
+--- input file and in the header of the jpeg-file, whereas lines
+--- beginning with '!' are completely removed from these files.
+------------------------------------------------------------------------
+--- First 8 columns are reserved for short parameter identification  ---
+--- (available abbreviations are found in the documentation)         ---
+---                                                                  ---
+--- The next 20 columns are reserved for parameter description!      ---
+---                                                                  ---
+------------------- General Model Info ---------------------------------
+VERSION     __DO NOT MODIFY__             : 4.1
+DIMENSION   dimension of input file       : 2
+PATH        Data file path                : ./
+MODEL       Modelname                     : h0_P0_I1.5
+------------------- Mesh Geometry Parameters ---------------------------
+GRIDH       horizontal cells              : 0           : 400         : 80
+GRIDV       vertical cells                : 160         : 400         : 35
+GRIDEXT     ext. factor                   : 1.05d0
+GRIDSPC     grid spacing                  : 6.25D1
+CYL         Cylind. geometry              : 1.0D0
+GRIDSPCM    max. grid spacing             : -20.D0
+------------------- Global setup parameters -----------------------------
+S_TYPE      setup type                    : DEFAULT
+T_SURF      Surface temp                  : 300.D0
+DTDZSURF    Surface Temp. Gradient (K/m)  : 5.D-3
+R_PLANET    Radius of planet (m)          : 1737.D3
+D_LITH      Lithospheric thickness (m)    : 200.D3
+GRAV_V      gravity                       : -1.6249D0
+ROCUTOFF    Density cutoff                : 150.D0
+------------------- Technical (control) options--------------------------
+ADVECT      Advect by mass or volume      : 1
+------------------- Projectile ("Object") Parameters --------------------
+OBJNUM      number of objects             : 1
+OBJRESH     CPPR horizontal               : 12
+OBJVEL      object velocity               : -1.5D4
+OBJMAT      object material               : mantle_
+OBJTYPE     object type                   : SPHEROID
+------------------- Target Parameters ----------------------------------
+LAYNUM      layers number                 : 1
+LAYPOS      layer position                : 450
+LAYMAT      layer material                : crust__
+LAYTPROF    thermal profile               : COND
+------------------- Time Parameters ------------------------------------
+DT          initial time increment        : 1.D-2
+DTMAX       maximum timestep              : 1.D+0
+TEND        end time                      : 3.0D3
+DTSAVE      save interval                 : 1.D1
+------------------- Boundary Condition Parameters ----------------------
+BND_L       left                          : FREESLIP
+BND_R       right                         : FREESLIP
+BND_B       bottom                        : NOSLIP
+BND_T       top                           : OUTFLOW
+------------------- Numerical Stability Parameters ---------------------
+AVIS        art. visc. linear             : 0.24D0
+AVIS2       art. visc. quad.              : 1.20D0
+------------------- Ac. Fluid. Parameters (see also material.inp) ------
+TOFF        toff                          : 59.D0
+CVIB        c_vib                         : 0.1D0
+VIB_MAX     Max. vib.vel.                 : 200.
+------------------- Tracer Particle Parameters -------------------------
+TR_QUAL     integration qual.             : 0
+TR_SPCH     tracer spacing X              : -1.D0
+TR_SPCV     tracer spacing Y              : -1.D0
+TR_VAR      add. tracer fiels             : #TrP-TrT#
+------------------- (Material) Model parameters (global) ---------------
+STRESS      Consider stress               : 1
+------------------- Data Saving Parameters -----------------------------
+QUALITY     Compression rate              : -50
+VARLIST     List of variables             : #Den-Tmp-Pre-Dam-Alp-VEL#
+------------------------------------------------------------------------
+<<END

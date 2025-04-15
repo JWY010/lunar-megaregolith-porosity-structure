@@ -1,0 +1,49 @@
+#ISMAT ! iSale material input file identification string
+--------------------------------------------------------------------------------
+MATNAME      Material name                                                : impactr      : crustL_      : crustU_
+EOSNAME      EOS name                                                     : dunite_      : granit2      : granit2
+EOSTYPE      EOS type                                                     : aneos        : aneos        : aneos
+STRMOD       Strength model                                               : ROCK         : ROCK         : ROCK
+DAMMOD       Damage model                                                 : IVANOV       : IVANOV       : IVANOV
+ACFL         Acoustic fluidisation                                        : BLOCK        : BLOCK        : BLOCK
+PORMOD       Porosity model                                               : NONE         : NONE         : WUNNEMA
+DILMOD       Dilatancy model                                              : ALPHAPT      : ALPHAPT      : ALPHAPT
+THSOFT       Thermal softening                                            : OHNAKA       : OHNAKA       : OHNAKA
+LDWEAK       Low density weakening                                        : POLY         : POLY         : POLY
+VISCO        Viscoelasticity                                              : NONE         : NONE         : NONE
+--------------------------------------------------------------------------------
+---------general parameters ----------------------------------------------------
+POIS         pois                                                         : 2.5D-01      : 2.5D-01      : 2.5D-01
+---------thermal softening -----------------------------------------------------
+TFRAC        tfrac                                                        : 1.1D+00      : 1.2D+00      : 1.2D+00
+---------thermal parameters ----------------------------------------------------
+TMELT0       tmelt0                                                       : 1.373D+03    : 1.513D+03    : 1.513D+03
+ASIMON       a_simon                                                      : 1.52D+09     : 1.84D+09     : 1.84D+09
+CSIMON       c_simon                                                      : 4.05D+00     : 7.27D+00     : 7.27D+00
+---------shear strength of intact material -------------------------------------
+YINT0        yint0                                                        : 5.07D+06     : 3.19D+07     : 3.19D+07
+FRICINT      fricint                                                      : 1.58D+00     : 1.1D+00      : 1.1D+00
+YLIMINT      ylimint                                                      : 3.26D+09     : 2.47D+09     : 2.47D+09
+---------shear strength of damaged material ------------------------------------
+YDAM0        ydam0 (ycoh)                                                 : 1.D+05       : 1.D+05       : 1.D+05
+FRICDAM      fricdam                                                      : 6.3D-01      : 7.1D-01      : 7.1D-01
+YLIMDAM      ylimdam                                                      : 3.26D+09     : 2.47D+09     : 2.47D+09
+---------shear damage (Ivanov) -------------------------------------------------
+IVANOV_A     Damage parameter                                             : 1.D-04       : 1.D-04       : 1.D-04
+IVANOV_B     Damage parameter                                             : 1.D-11       : 1.D-11       : 1.D-11
+IVANOV_C     Damage parameter                                             : 3.D+08       : 3.D+08       : 3.D+08
+---------porosity properties (Wuennemann) --------------------------------------
+ALPHA0       Initial porosity                                             : xxxxxxxxxxxx : 1.1111D+00   : 1.111D+00
+EPSE0        Elastic threshold                                            : xxxxxxxxxxxx : -1.D-02      : -1.D-02
+ALPHAX       Transition                                                   : xxxxxxxxxxxx : 1.0898D+00   : 1.0898D+00
+KAPPA        Exp Coefficient                                              : xxxxxxxxxxxx : 9.8D-01      : 9.8D-01
+CHI          Sound speed ratio                                            : xxxxxxxxxxxx : 1.D+00       : 1.D+00
+---------dilatancy properties --------------------------------------------------
+ALPHACRIT    Critical distension                                          : 1.2D+00      : 1.2D+00    : 1.2D+00
+DILATCOEF    Max. dilatancy angle                                         : 4.5D-02      : 4.5D-02    : 4.5D-02
+DILATPLIM    Zero dilatancy press.                                        : 2.D+08       : 2.D+08     : 2.D+08
+DILATFRIC    Friction coef at ALPHACRIT                                   : 4.D-01       : 4.D-01     : 4.D-01
+---------acoustic fluidization (block model) -----------------------------------
+GAMETA       gam_eta                                                      : 9.D-02       : 9.D-02       : 9.D-02
+GAMBETA      gam_beta                                                     : 5.0D+02      : 5.0D+02     : 5.0D+02
+<<END ! used to identify the end of this file
